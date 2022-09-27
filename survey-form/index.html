@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Freecodecamp</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <hr>
+            <label for="name" id="name-label">Please enter your name</label>
+            <input id="name" type="text" required placeholder="Muhammed Eren Cansev">
+            <hr>
+            <label for="email " id=email-label>Please enter your email</label>
+            <input id="email" type="email" required placeholder="mee.cansev@gmail.com">
+            <hr>
+            <label for="number" id="number-label">Please enter your age</label>
+            <input id="number" type="number" required min="5" max="90" placeholder="Age">
+            <hr>
+
+            <label for="dropdown">sugar or milk:</label>
+            <select id="dropdown">
+                <option>sugar</option>
+                <option>milk</option>
+            </select>
+            <hr>
+            <label for="radio-group">Eggs or chicken: </label>
+            <input type="radio" name="radio-group" id="yumurta" value="0">
+            <label for="yumurta">eggs</label>
+            <input type="radio" name="radio-group" id="tavuk" value="1">
+            <label for="tavuk">chicken</label>
+            <hr>
+            <label>Drink or eating:</label>
+            <input id="drink" type="checkbox" value="0">
+            <label for="drink">Drink</label>
+            <input type="checkbox" id="eating" value="1">
+            <label for="eating">Eating</label>
+            <hr>
+            <textarea>
+        If you have anything to add, write...
+            </textarea>
+
+            <hr>
+            <input id="submit" type="submit">
+            <hr>
+        </form>
+    </main>
+</body>
+
+</html>""
