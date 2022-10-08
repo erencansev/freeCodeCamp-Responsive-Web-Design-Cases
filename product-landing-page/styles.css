@@ -1,0 +1,84 @@
+#main {
+  background-color: RGB(38, 35, 51);
+  width: 100vw;
+}
+
+#headers-h1-img {
+  width: 400px;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#headers-h1 {
+  background-image: url("./1330557.jpg");
+  background-size: cover;
+  width: 100vw;
+  margin: 0px;
+  top: 0;
+  height: 800px;
+  line-height: 30px;
+  font-family: "Ubuntu", sans-serif;
+}
+.nav-link {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+}
+#nav-bar {
+  font-size: 20px;
+  width: 110px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 40px;
+  padding-right: 10px;
+}
+#flexbox {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+}
+#about {
+  width: 400px;
+  line-height: 27px;
+  margin-left: 260px;
+}
+#background {
+  margin-top: 100px;
+  width: 520px;
+  line-height: 27px;
+  margin-left: 500px;
+}
+
+#videos {
+  width: 800px;
+}
+#video-title {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+#video {
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+#learn-more {
+  margin-bottom: 100px;
+}
+
+#email {
+  width: 200px;
+}
+
+@media screen and (max-width: 750px) {
+  #headers-h1-img {
+    display: none;
+  }
+}
