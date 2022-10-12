@@ -30,6 +30,8 @@ header {
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  background: transparent;
+  background-color: transparent;
 }
 header::after {
   content: "";
