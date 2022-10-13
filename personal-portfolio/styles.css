@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=JetBrains+Mono:wght@400;600;800&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+:root {
+  --accent: tomato;
+  --bg: black;
+  --bg-2: grey;
+  --bg3: linear-gradient(135deg, indigo, maroon);
+  --bg-cards: var(--bg);
+  --bg-head: linear-gradient(45deg, midnightblue, darkmagenta);
+  --block-dtop-padding: 4rem 18%;
+  --block-tab-padding: 4rem 10%;
+  --block-mob-padding: 2rem 5%;
+  --shadow-subtle: 0 1px 1px rgba(0, 0, 0, 0.02), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.2),
+    0 6px 6px rgba(0, 0, 0, 0.4);
+  --text-light: ghostwhite;
+  --text-contact-links: var(--accent);
+  --text-shadow-dark: 2px 2px 1px black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-light);
+  font-family: "Anonymous Pro", monospace;
+  margin: 0;
+}
+
+/* ====== TYPOGRAPHY ====== */
+p {
+  font-family: "Anonymous Pro", monospace;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "JetBrains Mono", monospace;
+}
+
+h1 {
+  text-shadow: var(--text-shadow-dark);
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin: 0 0 2.25rem;
+}
+
+h3 {
+  color: var(--accent);
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h2 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ====== NAV BAR ====== */
+.navbar {
+  align-items: center;
+  background: black;
+  box-shadow: var(--shadow-subtle);
+  color: var(--text-light);
+  display: flex;
+  font-size: 1.4rem;
+  padding: 0 4rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: var(--accent);
+  flex: 1 0 auto;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 0 0 2rem;
+}
+
+.navbar a {
+  color: var(--text-light);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar a::after {
+  content: "";
+  background: var(--accent);
+  display: block;
+  height: 4px;
+  margin: 0.25rem 0 0 0;
+  transform: scale(0, 1);
+  transform-origin: left;
+  transition: transform 0.25s ease-out;
+}
+
+.navbar a:hover {
+  color: var(--accent);
+  transition: 0.25s;
+}
+
+.navbar a:hover::after {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 0 10%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    width: 100%;
+  }
+
+  .navbar {
+    flex-flow: column nowrap;
+    font-size: 1.2rem;
+    padding: 0 5%;
+  }
+
+  .navbar .logo {
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    justify-content: space-evenly;
+  }
+
+  .navbar ul li {
+    margin: 0;
+  }
+}
+
+/* ====== HEADER ====== */
+header {
+  align-items: center;
+  background: var(--bg-head);
+  color: var(--text-light);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 10%;
+}
+
+/* ====== SECTIONS ====== */
+section {
+  padding: var(--block-dtop-padding);
+  scroll-margin-top: 2rem;
+}
+
+.grid-cards {
+  display: grid;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+}
+
+@media only screen and (max-width: 1000px) {
+  section {
+    padding: var(--block-tab-padding);
+  }
+
+  .grid-cards {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(47%, 1fr));
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  section {
+    padding: var(--block-mob-padding);
+    scroll-margin-top: 6rem;
+  }
+}
+
+/* ====== ABOUT ====== */
+section#about {
+  background: var(--bg);
+}
+
+section#about ul {
+  font-size: 1.6rem;
+  line-height: 4rem;
+}
+
+section#about span.la-li {
+  color: var(--accent);
+}
+
+/* ====== PROJECTS ====== */
+section#projects {
+  background: var(--bg3);
+}
+
+section#projects h2 {
+  text-shadow: var(--text-shadow-dark);
+}
+
+.projects__card {
+  background: var(--bg-cards);
+  border-radius: 10px;
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex: 1 0 280px;
+  flex-flow: column nowrap;
+  padding: 0 0 1rem 0;
+  transition: 0.4s ease-in;
+}
+
+.projects__card:hover {
+  cursor: pointer;
+}
+
+.projects__card img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+a.projects__card {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.projects__card h3,
+.projects__card p {
+  padding: 0 1rem;
+}
+
+@media only screen and (min-width: 450px) {
+  .projects__card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    transition: 0.2s ease-out;
+  }
+}
+
+/* ====== CONTACT ====== */
+section#contact {
+  background: var(--bg);
+}
+
+.flex-cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.link-card {
+  display: flex;
+  flex: 1 0 200px;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 2rem;
+}
+
+.contacts__card i {
+  font-size: 64px;
+}
+
+.contacts__card a {
+  color: var(--text-contact-links);
+  text-decoration: none;
+  transition: 0.6s ease-in;
+}
+
+.contacts__card a:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-out;
+}
+
+p.contact-disclaimer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+  .flex-cards {
+    flex-flow: column nowrap;
+  }
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: black;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  padding: 0.5rem;
+}
