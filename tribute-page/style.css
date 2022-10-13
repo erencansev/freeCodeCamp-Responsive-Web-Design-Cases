@@ -1,7 +1,8 @@
 img {
   max-width: 100%;
-  display: block;
   border-radius: 2em;
+  display: block;
+  margin: auto;
 }
 body {
   background-color: #acabab;
@@ -12,4 +13,8 @@ small {
   text-align: center;
   display: block;
   margin: 15px;
+}
+
+h1 {
+  text-align: center;
 }
